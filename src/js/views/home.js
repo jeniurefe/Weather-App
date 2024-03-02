@@ -15,7 +15,7 @@ export const Home = () => (
 			<div className="box">
 				<div className="info-weather">
 					<div className="weather">
-						<img src=""></img>
+						<img src="">hola</img>
 					</div>
 				</div>
 
