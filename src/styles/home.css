@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000;200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:url('https://wallpapers-clan.com/wp-content/uploads/2023/11/aesthetic-pastel-clouds-desktop-wallpaper-preview.jpg');
+    font-family: 'Nunito', sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+    min-height: 100vh;
+}
+
+.container{
+    color: #fff;
+}
+
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Cambiado flex-direction a flex-wrap */
+}
+
+.date-container{
+    font-weight: 100;
+}
+
+.date-container .time{
+    font-size: 70px;
+    font-weight: 100;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 30px;
+}
+
+.place-container{
+    text-align: end;
+}
+
+.place-container .time-zone{
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.place-container .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.current-info .info{
+    display: flex;
+    flex-direction: column;
+    background: rgba(24,24,27, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+}
+
+.current-info .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
