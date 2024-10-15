@@ -22,7 +22,7 @@ const injectContext = PassedComponent => {
 
 		useEffect(() => {
 			const fetchWeather = async () => {
-				const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=7faf65657903fafdde9f6b76e655dc70');
+				const response = await fetch('');
 				const data = await response.json();
 				
 				// Usar la acción para actualizar el estado global
