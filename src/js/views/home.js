@@ -8,6 +8,8 @@ export const Home = () => {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
+        const API_KEY = 'MY KEY';
+
         const updateTimeAndDate = () => {
             const time = new Date();
             const month = time.getMonth();
@@ -24,6 +26,19 @@ export const Home = () => {
 
         updateTimeAndDate(); // Llamar inmediatamente para mostrar la hora actual al cargar
         const intervalId = setInterval(updateTimeAndDate, 1000); // Actualizar cada segundo
+
+        getWeatherData()
+        function getWeatherData () {
+            navigator.geolocation.getCurrentPosition((success) => {
+
+                let {latitude, longitude } = success.coords;
+
+                fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&appid=${API_key}`).then(res => res.json()).then(data =>{
+
+                    console.log(data)
+                })
+            })
+        }
 
         return () => clearInterval(intervalId); // Limpiar el intervalo al desmontar el componente
     }, []);

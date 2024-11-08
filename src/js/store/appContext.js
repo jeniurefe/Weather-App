@@ -41,7 +41,7 @@ const injectContext = PassedComponent => {
 
             fetchWeather();
 
-            // Mapeo de imágenes basado en el clima
+            // Mapeo de imágenes 
             const weatherImages = {
                 Clear: 'https://www.softwareheritage.org/wp-content/uploads/2017/12/clearsky.png',
                 Rain: 'https://images.unsplash.com/photo-1511634829096-045a111727eb?q=80&w=1934&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
