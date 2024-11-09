@@ -23,7 +23,7 @@ const injectContext = PassedComponent => {
         useEffect(() => {
             const fetchWeather = async () => {
                 try {
-                    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=74cb3cae64fdf8e7bd4d9e9d5b4d8e70');
+                    const response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=MY_KEY');
                     const data = await response.json();
                     
                     // Verifica si hay datos de clima disponibles
